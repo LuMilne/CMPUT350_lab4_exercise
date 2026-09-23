@@ -12,6 +12,11 @@ void test() {
 }
 
 int main() { 
-    test();
+    uint64_t x = 1;     // 0001
+    uint64_t y = 2;     // 0010
+    uint64_t z = 4;     // 0100
+    uint16_t prod = morton3d(x,y,z);
+    std::bitset<16> mort(prod);
+    std::cout << mort << "\n";
     return 0; 
 }
